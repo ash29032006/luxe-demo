@@ -244,8 +244,8 @@ input,textarea,select{font-family:var(--font-ui);cursor:none}
   .mobile-bar{display:flex}
   .whatsapp-sticky{bottom:76px}
   .collection{padding:60px 20px}
-  .swiper-container-wrapper{padding:0}
-  .swiper-btn{display:none}
+  .slider-container-wrapper{padding:0}
+  .slider-btn{display:none}
   .why-luxe{padding:80px 20px}
   .trust{padding:60px 20px}
   .enquiry-left,.enquiry-right{padding:40px 20px}
