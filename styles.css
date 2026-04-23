@@ -103,8 +103,18 @@ input,textarea,select{font-family:var(--font-ui);cursor:none}
 .filter-pill{padding:6px 18px;font-family:var(--font-ui);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;border-radius:3px;background:transparent;color:var(--text-secondary);border:1px solid rgba(201,168,76,0.25);transition:all 0.3s ease}
 .filter-pill:hover{border-color:var(--gold);color:var(--text-primary)}
 .filter-pill.active{background:var(--gold);color:var(--bg-primary);border-color:var(--gold)}
-.swiper-container-wrapper{position:relative;padding:0 50px}
-.swiper{overflow:hidden;padding-bottom:4px}
+.slider-container-wrapper{position:relative;padding:0 50px}
+.car-slider{position:relative;width:100%}
+.car-slider-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;padding-bottom:4px}
+.car-slider-track::-webkit-scrollbar{display:none}
+.car-item{scroll-snap-align:start;flex:0 0 calc(100% - 24px);max-width:100%}
+@media (min-width: 768px) {
+  .car-item{flex:0 0 calc(50% - 12px)}
+}
+@media (min-width: 1024px) {
+  .car-item{flex:0 0 calc(33.333% - 16px)}
+}
+
 .car-card{background:var(--bg-card);border:1px solid rgba(201,168,76,0.15);border-radius:4px;overflow:hidden;transition:border-color 0.3s ease,box-shadow 0.3s ease}
 .car-card:hover{border-color:rgba(201,168,76,0.7);box-shadow:0 0 28px rgba(201,168,76,0.06)}
 .car-card-img{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden}
@@ -113,19 +123,18 @@ input,textarea,select{font-family:var(--font-ui);cursor:none}
 .car-card-badge{position:absolute;top:12px;left:12px;background:#0a0a0a;color:var(--gold);font-family:var(--font-ui);font-size:11px;padding:6px 12px;border:1px solid rgba(201,168,76,0.3);border-radius:4px;z-index:2}
 .car-card-body{padding:24px}
 .car-card-name{font-family:var(--font-ui);font-weight:500;font-size:15px;color:var(--text-primary);margin-bottom:8px}
-.car-card-price{font-family:var(--font-display);font-size:30px;font-weight:400;color:var(--gold);margin-bottom:16px}
-.car-card-specs{display:flex;align-items:center;gap:0;margin-bottom:20px;font-family:var(--font-ui);font-size:12px;color:var(--text-secondary)}
-.car-card-specs span{white-space:nowrap}
-.spec-dot{padding:0 8px;color:#2a2a2a}
-.car-card-cta{position:relative;overflow:hidden;z-index:1;width:100%;height:42px;background:transparent;border:1px solid rgba(201,168,76,0.35);color:var(--gold);font-family:var(--font-ui);font-size:11px;letter-spacing:0.15em;border-radius:2px;text-transform:uppercase;transition:color 0.4s ease, border-color 0.4s ease}
+.car-card-price{font-family:var(--font-display);font-size:24px;color:var(--gold);margin-bottom:16px}
+.car-card-specs{display:flex;align-items:center;gap:8px;font-family:var(--font-ui);font-size:11px;color:var(--text-secondary);margin-bottom:24px}
+.spec-dot{color:var(--gold)}
+.car-card-cta{position:relative;overflow:hidden;z-index:1;width:100%;height:42px;background:transparent;border:1px solid rgba(201,168,76,0.35);color:var(--gold);font-family:var(--font-ui);font-size:11px;letter-spacing:0.15em;border-radius:2px;text-transform:uppercase;transition:color 0.4s ease, border-color 0.4s ease;cursor:none}
 .car-card-cta::before{background:var(--gold)}
 .car-card-cta:hover{color:var(--bg-primary);border-color:var(--gold)}
-.swiper-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;background:transparent;border:1px solid rgba(201,168,76,0.3);color:var(--gold);font-size:20px;display:flex;align-items:center;justify-content:center;z-index:10;transition:all 0.3s ease;border-radius:2px}
-.swiper-btn:hover{border-color:var(--gold);background:rgba(201,168,76,0.08)}
-.swiper-btn-prev{left:0}
-.swiper-btn-next{right:0}
-.swiper-progress{width:100%;height:2px;background:rgba(201,168,76,0.15);margin-top:40px;border-radius:2px;overflow:hidden}
-.swiper-progress-fill{height:100%;background:var(--gold);width:33%;transition:width 0.3s ease;border-radius:2px}
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;background:transparent;border:1px solid rgba(201,168,76,0.3);color:var(--gold);font-size:20px;display:flex;align-items:center;justify-content:center;z-index:10;transition:all 0.3s ease;border-radius:2px;cursor:none}
+.slider-btn:hover{border-color:var(--gold);background:rgba(201,168,76,0.08)}
+.slider-btn-prev{left:0}
+.slider-btn-next{right:0}
+.slider-progress{width:100%;height:2px;background:rgba(201,168,76,0.15);margin-top:40px;border-radius:2px;overflow:hidden}
+.slider-progress-fill{height:100%;background:var(--gold);width:33%;transition:width 0.3s ease;border-radius:2px}
 
 /* ═══ TRUST NUMBERS ═══ */
 .trust{background:#0d0d0d;padding:100px 60px;border-top:1px solid rgba(201,168,76,0.12);border-bottom:1px solid rgba(201,168,76,0.12)}

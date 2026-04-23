@@ -158,40 +158,54 @@
     });
   }
 
-  // ── Swiper Carousel ──
-  if (hasSwiper) {
-    var carSwiper = new Swiper('#carSwiper', {
-      slidesPerView: 1.2,
-      spaceBetween: 20,
-      grabCursor: false,
-      breakpoints: {
-        768: { slidesPerView: 2, spaceBetween: 24 },
-        1024: { slidesPerView: 3, spaceBetween: 24 },
-      },
-      on: { init: updateProgress, slideChange: updateProgress, progress: updateProgress },
+  // ── Native Slider Logic ──
+  const carSliderTrack = document.querySelector('.car-slider-track');
+  const sliderPrev = document.getElementById('sliderPrev');
+  const sliderNext = document.getElementById('sliderNext');
+  const sliderProgress = document.getElementById('sliderProgress');
+
+  if (carSliderTrack && sliderPrev && sliderNext) {
+    // ── Navigation Buttons ──
+    sliderPrev.addEventListener('click', () => {
+      const itemWidth = carSliderTrack.querySelector('.car-item').offsetWidth + 24; // 24px gap
+      carSliderTrack.scrollBy({ left: -itemWidth, behavior: 'smooth' });
     });
 
-    document.getElementById('swiperPrev').addEventListener('click', function () { carSwiper.slidePrev(); });
-    document.getElementById('swiperNext').addEventListener('click', function () { carSwiper.slideNext(); });
+    sliderNext.addEventListener('click', () => {
+      const itemWidth = carSliderTrack.querySelector('.car-item').offsetWidth + 24; // 24px gap
+      carSliderTrack.scrollBy({ left: itemWidth, behavior: 'smooth' });
+    });
 
-    function updateProgress() {
-      var progress = carSwiper.progress || 0;
-      var fill = Math.max(10, Math.min(100, progress * 100 + 10));
-      var bar = document.getElementById('swiperProgress');
-      if (bar) bar.style.width = fill + '%';
-    }
+    // ── Progress Bar ──
+    const updateProgress = () => {
+      const maxScroll = carSliderTrack.scrollWidth - carSliderTrack.clientWidth;
+      const progress = maxScroll > 0 ? carSliderTrack.scrollLeft / maxScroll : 0;
+      const fill = Math.max(10, Math.min(100, progress * 100 + 10)); // +10 for baseline visual width
+      if (sliderProgress) sliderProgress.style.width = fill + '%';
+    };
+
+    carSliderTrack.addEventListener('scroll', updateProgress);
+    window.addEventListener('resize', updateProgress);
+    // Init progress
+    setTimeout(updateProgress, 100);
 
     // ── Filter Pills ──
     document.querySelectorAll('.filter-pill').forEach(function (pill) {
       pill.addEventListener('click', function () {
-        document.querySelectorAll('.filter-pill').forEach(function (p) { p.classList.remove('active'); });
+        document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
-        var filter = pill.getAttribute('data-filter');
-        document.querySelectorAll('.swiper-slide').forEach(function (slide) {
-          slide.style.display = (filter === 'all' || slide.getAttribute('data-category') === filter) ? '' : 'none';
+        const filter = pill.getAttribute('data-filter');
+        
+        document.querySelectorAll('.car-item').forEach(function (slide) {
+          if (filter === 'all' || slide.getAttribute('data-category') === filter) {
+            slide.style.display = '';
+          } else {
+            slide.style.display = 'none';
+          }
         });
-        carSwiper.update();
-        carSwiper.slideTo(0);
+        
+        carSliderTrack.scrollTo({ left: 0, behavior: 'smooth' });
+        setTimeout(updateProgress, 50);
       });
     });
   }

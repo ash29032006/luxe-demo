@@ -6,7 +6,6 @@
   <title>Luxe Cars | Premium Pre-Owned Luxury Cars in Bangalore</title>
   <meta name="description" content="Bangalore's finest pre-owned luxury car dealership. Verified, transparent, premium. Backed by Popular Group with 75+ years of automotive legacy.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
@@ -100,17 +99,17 @@
         <button class="filter-pill" data-filter="crossover">Crossover</button>
       </div>
     </div>
-    <div class="swiper-container-wrapper">
-      <button class="swiper-btn swiper-btn-prev" id="swiperPrev">
+    <div class="slider-container-wrapper">
+      <button class="slider-btn slider-btn-prev" id="sliderPrev">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
       </button>
-      <button class="swiper-btn swiper-btn-next" id="swiperNext">
+      <button class="slider-btn slider-btn-next" id="sliderNext">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
       </button>
-      <div class="swiper" id="carSwiper">
-        <div class="swiper-wrapper">
+      <div class="car-slider" id="carSlider">
+        <div class="car-slider-track">
           <!-- Card 1: Audi Q3 -->
-          <div class="swiper-slide" data-category="crossover">
+          <div class="car-item" data-category="crossover">
             <div class="car-card">
               <div class="car-card-img" data-cursor="view">
                 <span class="car-card-badge">1 Owner</span>
@@ -129,7 +128,7 @@
             </div>
           </div>
           <!-- Card 2: Land Rover Discovery Sport -->
-          <div class="swiper-slide" data-category="suv">
+          <div class="car-item" data-category="suv">
             <div class="car-card">
               <div class="car-card-img" data-cursor="view">
                 <span class="car-card-badge">1 Owner</span>
@@ -148,7 +147,7 @@
             </div>
           </div>
           <!-- Card 3: Lexus ES 300H -->
-          <div class="swiper-slide" data-category="sedan">
+          <div class="car-item" data-category="sedan">
             <div class="car-card">
               <div class="car-card-img" data-cursor="view">
                 <span class="car-card-badge">1 Owner</span>
@@ -167,7 +166,7 @@
             </div>
           </div>
           <!-- Card 4: Mercedes E-200 Hybrid -->
-          <div class="swiper-slide" data-category="sedan">
+          <div class="car-item" data-category="sedan">
             <div class="car-card">
               <div class="car-card-img" data-cursor="view">
                 <span class="car-card-badge">1 Owner</span>
@@ -186,7 +185,7 @@
             </div>
           </div>
           <!-- Card 5: Mercedes E-200 Exclusive -->
-          <div class="swiper-slide" data-category="sedan">
+          <div class="car-item" data-category="sedan">
             <div class="car-card">
               <div class="car-card-img" data-cursor="view">
                 <span class="car-card-badge">1 Owner</span>
@@ -205,7 +204,7 @@
             </div>
           </div>
           <!-- Card 6: Mercedes S 350D -->
-          <div class="swiper-slide" data-category="sedan">
+          <div class="car-item" data-category="sedan">
             <div class="car-card">
               <div class="car-card-img" data-cursor="view">
                 <span class="car-card-badge">1 Owner</span>
@@ -225,8 +224,8 @@
           </div>
         </div>
       </div>
-      <div class="swiper-progress">
-        <div class="swiper-progress-fill" id="swiperProgress"></div>
+      <div class="slider-progress">
+        <div class="slider-progress-fill" id="sliderProgress"></div>
       </div>
     </div>
   </section>
@@ -395,7 +394,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
