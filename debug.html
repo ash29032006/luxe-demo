@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><title>Debug</title></head>
+<body style="background:#050505;color:#fff;font-family:monospace;padding:20px">
+<h1>Debug Page</h1>
+<div id="output"></div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+var out = document.getElementById('output');
+function log(msg) { out.innerHTML += '<p>' + msg + '</p>'; }
+
+log('gsap: ' + (typeof gsap));
+log('ScrollTrigger: ' + (typeof ScrollTrigger));
+log('Lenis: ' + (typeof Lenis));
+log('Swiper: ' + (typeof Swiper));
+
+try {
+  gsap.registerPlugin(ScrollTrigger);
+  log('ScrollTrigger registered OK');
+} catch(e) { log('ERROR registering ScrollTrigger: ' + e.message); }
+
+try {
+  var lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+  log('Lenis created OK');
+  log('lenis.on type: ' + typeof lenis.on);
+  log('lenis.raf type: ' + typeof lenis.raf);
+} catch(e) { log('ERROR creating Lenis: ' + e.message); }
+
+try {
+  lenis.on('scroll', ScrollTrigger.update);
+  log('Lenis scroll listener OK');
+} catch(e) { log('ERROR lenis.on: ' + e.message); }
+
+try {
+  gsap.ticker.add(function(time) { lenis.raf(time * 1000); });
+  log('GSAP ticker connected OK');
+} catch(e) { log('ERROR gsap ticker: ' + e.message); }
+
+log('All libs loaded successfully!');
+</script>
+</body></html>
