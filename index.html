@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxe Cars | Premium Pre-Owned Luxury Cars in Bangalore</title>
+  <meta name="description" content="Bangalore's finest pre-owned luxury car dealership. Verified, transparent, premium. Backed by Popular Group with 75+ years of automotive legacy.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor"><span class="cursor-text">View</span></div>
+
+  <!-- Page Loader -->
+  <div class="loader" id="loader">
+    <span class="loader-text" id="loaderText">Luxe Cars</span>
+    <div class="loader-line" id="loaderLine"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="navbar-brand">Luxe Cars</a>
+    <div class="navbar-links">
+      <a href="#collection">Collection</a>
+      <a href="#why-luxe">About</a>
+      <a href="#enquiry">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="hero.png" alt="Mercedes-Benz in dark luxury showroom">
+      <div class="hero-overlay-base"></div>
+      <div class="hero-overlay-gradient"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-eyebrow" id="heroEyebrow">Bangalore's Finest</span>
+      <h1 class="hero-headline" id="heroHeadline">Own the Extraordinary</h1>
+      <p class="hero-sub" id="heroSub">Premium pre-owned luxury cars. Verified. Transparent. Yours.</p>
+      <div class="hero-buttons" id="heroButtons">
+        <a href="#collection" class="btn-primary">View Collection</a>
+        <a href="https://wa.me/917411856438?text=Hi%2C%20I'm%20interested%20in%20a%20luxury%20car" target="_blank" class="btn-outline">WhatsApp Now</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span class="hero-scroll-text">scroll</span>
+    </div>
+  </section>
+
+  <!-- BRAND MARQUEE -->
+  <section class="marquee-section" id="brands">
+    <span class="marquee-label">Brands We Carry</span>
+    <div class="marquee-row marquee-left">
+      <div class="marquee-track">
+        <span class="marquee-brand">Audi</span>
+        <span class="marquee-brand">BMW</span>
+        <span class="marquee-brand">Mercedes-Benz</span>
+        <span class="marquee-brand">Porsche</span>
+        <span class="marquee-brand">Land Rover</span>
+        <span class="marquee-brand">Range Rover</span>
+        <span class="marquee-brand">Audi</span>
+        <span class="marquee-brand">BMW</span>
+        <span class="marquee-brand">Mercedes-Benz</span>
+        <span class="marquee-brand">Porsche</span>
+        <span class="marquee-brand">Land Rover</span>
+        <span class="marquee-brand">Range Rover</span>
+      </div>
+    </div>
+    <div class="marquee-row marquee-right">
+      <div class="marquee-track">
+        <span class="marquee-brand">Lexus</span>
+        <span class="marquee-brand">Jaguar</span>
+        <span class="marquee-brand">Maserati</span>
+        <span class="marquee-brand">Volvo</span>
+        <span class="marquee-brand">Jeep</span>
+        <span class="marquee-brand">Skoda</span>
+        <span class="marquee-brand">Lexus</span>
+        <span class="marquee-brand">Jaguar</span>
+        <span class="marquee-brand">Maserati</span>
+        <span class="marquee-brand">Volvo</span>
+        <span class="marquee-brand">Jeep</span>
+        <span class="marquee-brand">Skoda</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAR COLLECTION -->
+  <section class="collection" id="collection">
+    <div class="collection-header reveal">
+      <span class="section-eyebrow">Our Inventory</span>
+      <h2 class="section-heading">Current Collection</h2>
+      <div class="filter-pills">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="sedan">Sedan</button>
+        <button class="filter-pill" data-filter="suv">SUV</button>
+        <button class="filter-pill" data-filter="crossover">Crossover</button>
+      </div>
+    </div>
+    <div class="swiper-container-wrapper">
+      <button class="swiper-btn swiper-btn-prev" id="swiperPrev">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="swiper-btn swiper-btn-next" id="swiperNext">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <div class="swiper" id="carSwiper">
+        <div class="swiper-wrapper">
+          <!-- Card 1: Audi Q3 -->
+          <div class="swiper-slide" data-category="crossover">
+            <div class="car-card">
+              <div class="car-card-img" data-cursor="view">
+                <span class="car-card-badge">1 Owner</span>
+                <img src="https://luxecars.blr1.cdn.digitaloceanspaces.com/65d080ffebf233a7670051daf013256b.jpeg" alt="Audi Q3 40 TFSI">
+              </div>
+              <div class="car-card-body">
+                <h3 class="car-card-name">Audi Q3 40 TFSI Quattro Tech</h3>
+                <div class="car-card-price">₹44,00,000</div>
+                <div class="car-card-specs">
+                  <span>5,956 km</span><span class="spec-dot">·</span>
+                  <span>2023</span><span class="spec-dot">·</span>
+                  <span>Petrol</span>
+                </div>
+                <button class="car-card-cta">Enquire Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2: Land Rover Discovery Sport -->
+          <div class="swiper-slide" data-category="suv">
+            <div class="car-card">
+              <div class="car-card-img" data-cursor="view">
+                <span class="car-card-badge">1 Owner</span>
+                <img src="https://luxecars.blr1.cdn.digitaloceanspaces.com/719045aa8ceabb18bd0aeabd79f4f810.jpeg" alt="Land Rover Discovery Sport">
+              </div>
+              <div class="car-card-body">
+                <h3 class="car-card-name">Land Rover Discovery Sport SE</h3>
+                <div class="car-card-price">₹62,75,000</div>
+                <div class="car-card-specs">
+                  <span>36,100 km</span><span class="spec-dot">·</span>
+                  <span>2024</span><span class="spec-dot">·</span>
+                  <span>Diesel</span>
+                </div>
+                <button class="car-card-cta">Enquire Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3: Lexus ES 300H -->
+          <div class="swiper-slide" data-category="sedan">
+            <div class="car-card">
+              <div class="car-card-img" data-cursor="view">
+                <span class="car-card-badge">1 Owner</span>
+                <img src="https://luxecars.blr1.cdn.digitaloceanspaces.com/919d0fd8ea323f9636bdbe425a32453f.jpeg" alt="Lexus ES 300H">
+              </div>
+              <div class="car-card-body">
+                <h3 class="car-card-name">Lexus Es 300h Exquisite</h3>
+                <div class="car-card-price">₹45,50,000</div>
+                <div class="car-card-specs">
+                  <span>7,979 km</span><span class="spec-dot">·</span>
+                  <span>2021</span><span class="spec-dot">·</span>
+                  <span>Petrol</span>
+                </div>
+                <button class="car-card-cta">Enquire Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4: Mercedes E-200 Hybrid -->
+          <div class="swiper-slide" data-category="sedan">
+            <div class="car-card">
+              <div class="car-card-img" data-cursor="view">
+                <span class="car-card-badge">1 Owner</span>
+                <img src="https://luxecars.blr1.cdn.digitaloceanspaces.com/24bdedc0a330e278adb66f9ab1b035a4.jpeg" alt="Mercedes E-200 Hybrid">
+              </div>
+              <div class="car-card-body">
+                <h3 class="car-card-name">Mercedes-Benz E-200 Hybrid</h3>
+                <div class="car-card-price">₹68,75,000</div>
+                <div class="car-card-specs">
+                  <span>8,719 km</span><span class="spec-dot">·</span>
+                  <span>2024</span><span class="spec-dot">·</span>
+                  <span>Petrol</span>
+                </div>
+                <button class="car-card-cta">Enquire Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5: Mercedes E-200 Exclusive -->
+          <div class="swiper-slide" data-category="sedan">
+            <div class="car-card">
+              <div class="car-card-img" data-cursor="view">
+                <span class="car-card-badge">1 Owner</span>
+                <img src="https://luxecars.blr1.cdn.digitaloceanspaces.com/e756034e2c4803ec69f45778151b1098.jpeg" alt="Mercedes E-200 Exclusive">
+              </div>
+              <div class="car-card-body">
+                <h3 class="car-card-name">Mercedes-Benz E-200 Exclusive</h3>
+                <div class="car-card-price">₹48,00,000</div>
+                <div class="car-card-specs">
+                  <span>43,026 km</span><span class="spec-dot">·</span>
+                  <span>2021</span><span class="spec-dot">·</span>
+                  <span>Petrol</span>
+                </div>
+                <button class="car-card-cta">Enquire Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 6: Mercedes S 350D -->
+          <div class="swiper-slide" data-category="sedan">
+            <div class="car-card">
+              <div class="car-card-img" data-cursor="view">
+                <span class="car-card-badge">1 Owner</span>
+                <img src="https://luxecars.blr1.cdn.digitaloceanspaces.com/93d9ea5ef5d0289bb275a36301309903.jpeg" alt="Mercedes S 350D">
+              </div>
+              <div class="car-card-body">
+                <h3 class="car-card-name">Mercedes-Benz S 350d</h3>
+                <div class="car-card-price">₹74,00,000</div>
+                <div class="car-card-specs">
+                  <span>16,573 km</span><span class="spec-dot">·</span>
+                  <span>2019</span><span class="spec-dot">·</span>
+                  <span>Diesel</span>
+                </div>
+                <button class="car-card-cta">Enquire Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-progress">
+        <div class="swiper-progress-fill" id="swiperProgress"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST NUMBERS -->
+  <section class="trust" id="trust">
+    <div class="trust-grid reveal">
+      <div class="trust-stat">
+        <div class="trust-number-wrapper">
+          <span class="trust-number" data-target="200" data-decimal="false">200</span>
+          <span class="trust-suffix">+</span>
+        </div>
+        <div class="trust-label">Happy Customers</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <div class="trust-number-wrapper">
+          <span class="trust-number" data-target="4.8" data-decimal="true">4.8</span>
+          <span class="trust-suffix"> ★</span>
+        </div>
+        <div class="trust-label">Google Rating</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <div class="trust-number-wrapper">
+          <span class="trust-number" data-target="75" data-decimal="false">75</span>
+          <span class="trust-suffix">&nbsp;Years</span>
+        </div>
+        <div class="trust-label">Popular Group</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <div class="trust-number-wrapper">
+          <span class="trust-number" data-target="100" data-decimal="false">100</span>
+          <span class="trust-suffix">%</span>
+        </div>
+        <div class="trust-label">Verified Cars</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY LUXE CARS -->
+  <section class="why-luxe" id="why-luxe">
+    <div class="reveal">
+      <span class="section-eyebrow" style="display:block">Why Us</span>
+      <h2 class="section-heading">Why Choose Luxe</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </div>
+        <h4>Rigorous Inspection</h4>
+        <p>100+ point quality check on every vehicle</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h4>Full Transparency</h4>
+        <p>Documents, service history and RTO verified</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <h4>Easy Finance</h4>
+        <p>Loan approval in 24 hours, all major banks</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>Warranty Included</h4>
+        <p>Pan-India roadside assistance on every car</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENQUIRY -->
+  <section class="enquiry" id="enquiry">
+    <div class="enquiry-left">
+      <div class="reveal">
+        <span class="section-eyebrow">Get In Touch</span>
+        <h2 class="section-heading" style="margin-bottom:16px">Let's Find Your Car</h2>
+        <p class="enquiry-sub">No pressure. Just cars.</p>
+        <div class="enquiry-address">
+          Luxe Cars, #46/3A, Kudlu Gate,<br>
+          7th Mile, Hosur Main Road,<br>
+          Bangalore, Karnataka – 560068<br>
+          Mon – Sun 9.30 AM – 6.30 PM
+        </div>
+        <div class="enquiry-phone">+91 7411 856 438</div>
+        <div class="enquiry-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0876!2d77.6369!3d12.8843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b2e6f0e26b%3A0x3c3b9e3b2b0b0b0b!2sKudlu%20Gate%2C%20Bangalore!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="enquiry-right">
+      <form class="reveal" id="enquiryForm" onsubmit="return false;">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+91" required>
+        </div>
+        <div class="form-group">
+          <label for="brand">Preferred Brand</label>
+          <select id="brand">
+            <option value="">Select a brand</option>
+            <option>Audi</option><option>BMW</option><option>Jaguar</option>
+            <option>Land Rover</option><option>Lexus</option><option>Maserati</option>
+            <option>Mercedes-Benz</option><option>Porsche</option><option>Volvo</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="Tell us what you're looking for..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">SEND ENQUIRY</button>
+        <a href="https://wa.me/917411856438?text=Hi%2C%20I'm%20interested%20in%20a%20luxury%20car" target="_blank" class="btn-whatsapp-form">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Luxe Cars</div>
+        <div class="footer-tagline">Bangalore's finest pre-owned luxury cars</div>
+      </div>
+      <div class="footer-links">
+        <a href="#collection">Collection</a>
+        <a href="#why-luxe">About</a>
+        <a href="#enquiry">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-phone">+91 7411 856 438</div>
+        <div class="footer-contact-legacy">Backed by Popular Group,<br>75 years of automotive excellence</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Luxe Cars Bangalore. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky WhatsApp -->
+  <a href="https://wa.me/917411856438?text=Hi%2C%20I'm%20interested%20in%20a%20luxury%20car" target="_blank" class="whatsapp-sticky">
+    <span class="whatsapp-tooltip">Chat with us</span>
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Mobile Bottom Bar -->
+  <div class="mobile-bar">
+    <a href="tel:+917411856438">📞 Call Now</a>
+    <a href="https://wa.me/917411856438" target="_blank">💬 WhatsApp</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
